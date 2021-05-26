@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-05-25T21:58:59.877Z",
+    "end": "2021-05-25T21:59:09.808Z",
+    "duration": 9931,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "acc114a6-dcd0-45d8-84d5-1e4776916129",
+      "title": "",
+      "fullFile": "cypress/integration/examples/LoginTest2Fail.js",
+      "file": "cypress/integration/examples/LoginTest2Fail.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "011b6015-da81-4575-acc9-f56b2a4350f7",
+          "title": "Test for a Medium Screen",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Visit a web page",
+              "fullTitle": "Test for a Medium Screen Visit a web page",
+              "timedOut": null,
+              "duration": 7727,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(1024, 768);\ncy.visit('https://login.llamas.omg.pub/?login_challenge=2ccd7ff8da0f4c09b20bbefc6ee2f3c2'); //Button check\n//Button check\n//Button check\n//Input User\ncy.get('.css-1mtgxzc').eq(0).type(Cypress.env('user_name')); //Input Pass\ncy.get('.css-1mtgxzc').eq(1).type('user_password'); //Click Login button\ncy.get('button').eq(10).click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `10`, but never found it. Queried from element: [ <button.css-14mgznn>, 1 more... ]",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `10`, but never found it. Queried from element: [ <button.css-14mgznn>, 1 more... ]\n    at Context.eval (https://login.llamas.omg.pub/__cypress/tests?p=cypress/integration/examples/LoginTest2Fail.js:111:22)",
+                "diff": null
+              },
+              "uuid": "70b5cf85-0849-4c55-b153-3dda355af97a",
+              "parentUUID": "011b6015-da81-4575-acc9-f56b2a4350f7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "70b5cf85-0849-4c55-b153-3dda355af97a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7727,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "configFile": "reporter-config.json"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

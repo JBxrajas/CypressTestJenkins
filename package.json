@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "report:merge": "mochawesome-merge --reportDir cypress/results/json > cypress/results/mochawesome-bundle.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "report:generate": "marge cypress/results/json/mochawesome.json -o cypress/reports/html"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "cypress-multi-reporters": "^1.5.0",
     "mocha": "^8.4.0",
     "mochawesome": "^6.2.2",
-    "mochawesome-merge": "^4.2.0"
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
   }
 }

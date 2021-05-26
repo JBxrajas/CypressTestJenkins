@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2021-05-25T20:30:45.426Z",
-    "end": "2021-05-25T20:30:52.828Z",
-    "duration": 7402,
+    "failures": 1,
+    "start": "2021-05-25T21:49:25.666Z",
+    "end": "2021-05-25T21:49:36.116Z",
+    "duration": 10450,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "421a1949-887c-4bf9-8ef8-49d8941a2ac9",
+      "uuid": "e8c2fddb-d4e2-412e-a6cd-b5db0559b8a6",
       "title": "",
-      "fullFile": "cypress/integration/examples/Medium_Screen.js",
-      "file": "cypress/integration/examples/Medium_Screen.js",
+      "fullFile": "cypress/integration/examples/LoginTest2Fail.js",
+      "file": "cypress/integration/examples/LoginTest2Fail.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "197befc3-222d-4584-b5a8-196e141d4326",
+          "uuid": "41100006-7dce-489a-838e-6fb53213b832",
           "title": "Test for a Medium Screen",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,33 @@
               "title": "Visit a web page",
               "fullTitle": "Test for a Medium Screen Visit a web page",
               "timedOut": null,
-              "duration": 5177,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 8343,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
-              "code": "cy.viewport(1024, 768);\ncy.visit('https://login.llamas.omg.pub/?login_challenge=2ccd7ff8da0f4c09b20bbefc6ee2f3c2'); //Button check\n//Button check\n//Button check\n//Input User\ncy.get('.css-1mtgxzc').eq(0).type(Cypress.env('user_name')); //Input Pass\ncy.get('.css-1mtgxzc').eq(1).type(Cypress.env('user_password')); //Click Login button\ncy.get('button').eq(1).click();",
-              "err": {},
-              "uuid": "afdc4e61-439c-47f6-b498-134be7f59b2e",
-              "parentUUID": "197befc3-222d-4584-b5a8-196e141d4326",
+              "code": "cy.viewport(1024, 768);\ncy.visit('https://login.llamas.omg.pub/?login_challenge=2ccd7ff8da0f4c09b20bbefc6ee2f3c2'); //Button check\n//Button check\n//Button check\n//Input User\ncy.get('.css-1mtgxzc').eq(0).type(Cypress.env('user_name')); //Input Pass\ncy.get('.css-1mtgxzc').eq(1).type('user_password'); //Click Login button\ncy.get('button').eq(10).click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `10`, but never found it. Queried from element: [ <button.css-14mgznn>, 1 more... ]",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `10`, but never found it. Queried from element: [ <button.css-14mgznn>, 1 more... ]\n    at Context.eval (https://login.llamas.omg.pub/__cypress/tests?p=cypress/integration/examples/LoginTest2Fail.js:111:22)",
+                "diff": null
+              },
+              "uuid": "faa8adc3-3d43-46cc-af1e-c5b9c201e167",
+              "parentUUID": "41100006-7dce-489a-838e-6fb53213b832",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "afdc4e61-439c-47f6-b498-134be7f59b2e"
+          "passes": [],
+          "failures": [
+            "faa8adc3-3d43-46cc-af1e-c5b9c201e167"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5177,
+          "duration": 8343,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
